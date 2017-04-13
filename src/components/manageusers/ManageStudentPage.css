@@ -1,0 +1,385 @@
+/* index */
+.sie_nav{
+    padding: 0px 15px 0px 0px;
+}
+
+.main{
+    /*background-image: url(assets/img/bg.png);*/
+}
+
+#search-dashboard {
+    margin-top: 0px;
+}
+
+#table_topic th, #table_topic td {
+    padding: 15px;
+}
+
+.navbar-form {
+    /*border-color: none;*/
+}
+
+.role {
+    margin-top: 0;
+}
+
+.date_add_cv {
+    float: right;
+}
+
+.cv_img{
+    max-width: 100%;
+    max-height: 100%;
+    padding-bottom: 25px;
+}
+.upload_picture_btn{
+    display: block;
+    margin: 0 auto;
+}
+
+.category_row{
+    margin-top: 10px;
+}
+
+.category{
+    margin-top: 5px;
+}
+
+.sort_by_row{
+    margin-top: 10px;
+}
+
+.sort_by{
+    margin-top: 5px;
+}
+
+.add_topic_btn{
+    margin-top: 10px;
+    padding-left: 63px;
+}
+
+
+.time{
+    color: #8D99A8;
+}
+
+.navbar-form{
+    padding-left: 0px;
+}
+
+.search{
+    padding-top: 10px;
+    padding-left: 0px;
+}
+
+.search_user{
+    padding-left: 10px;
+}
+
+.search_label{
+    padding-left: 0;
+    /*padding-right: 5px;*/
+}
+
+.add_new_student{
+    font-family: 'Linearicons-Free';
+    float: right;
+    padding-left: 40px;
+    padding-right: 10px;
+}
+
+.add_new_btn{
+    float: right;
+}
+
+.decription_cap{
+    padding: 0px !important;
+}
+
+.job_list{
+    padding: 0px !important;
+}
+
+.topic_date{
+    margin-bottom: 10px;
+}
+
+.sort_table{
+    float: right;
+}
+
+.topic_num{
+    margin-top:0;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.topic_name{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.job_row{
+    margin-bottom: 10px;
+}
+
+.internship_job_label{
+    padding: 0 !important;
+}
+
+.job_details_body{
+    padding-top: 0px !important;
+}
+
+.details{
+    font-size: 16px;
+}
+
+.page_title{
+    margin-top: 0px !important;
+}
+
+.profile-left {
+    background-color: transparent;
+}
+
+.user_info{
+    padding-top: 0px;
+}
+
+.date_add_cv{
+    color: black;
+}
+
+.cv_list{
+    border: solid 1px;
+    margin-bottom: 10px;
+}
+
+.cv_img{
+    padding-top: 15px;
+}
+
+.avatar_img{
+    width: 50%;
+    height: 50%;
+}
+
+.action_title{
+    font-size: 20px !important;
+}
+
+.profile_info_btn{
+    float: right;
+}
+
+.home_img{
+    width: 100%;
+}
+
+.home_action_img{
+    width: 30%;
+}
+
+.about_text{
+    padding-left: 20px;
+}
+
+.instructor_text{
+    padding-left: 20px;
+}
+
+.footer{
+    /*background-image: url("./assets/img/footerbg.png");*/
+}
+
+.img_footer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+.sie_info{
+    float: left;
+    padding-right: 80px;
+    color: #fff;
+    padding-left: 70px;
+    padding-top: 20px;
+}
+
+.sie_copyright {
+    width: 100%;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.sie_copyright > p{
+    color: white;
+    font-size: 14px;
+    text-align: right;
+}
+
+.nav_ltu{
+    /*background-image: url("./assets/img/navbg.png");*/
+}
+
+.info_nav{
+    padding-top: 5px;
+}
+
+.nav_school{
+    font-size: 20px;
+    margin-bottom: 0px !important;
+    color: #fff;
+}
+
+.nav_sie{
+    font-size: 24px;
+    color: #fff;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 80%;
+    margin: auto;
+}
+
+.img_slide{
+    width: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.left_btn{
+    padding-top: 50px;
+}
+
+.list_job{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.week_job{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+.upload_picture_btn{
+    margin-top: 20px;
+}
+
+.ava_img{
+    width: 70%;
+}
+
+.cv_ava_img{
+    margin-left: 110px;
+    margin-bottom: 5px;
+}
+
+.cv_position{
+    margin-left: 100px;
+}
+
+.cv_person_name{
+    font-size: 38px;
+    margin-left: 30px;
+}
+
+.cv_education{
+    font-size: 18px;
+}
+
+.cv_from_date{
+    width: 70px;
+}
+
+.cv_to_date{
+    width: 70px;
+}
+
+.cv_class_group{
+    width: 90px;
+}
+
+.cv_grade_text{
+    margin-left: 13px;
+}
+
+.cv_school_text{
+    margin-left: 8px;
+}
+
+.cv_major_text{
+    margin-left: 15px;
+}
+
+.cv_contact_label{
+    margin-left: 20px;
+}
+
+.cv_contact{
+    font-size: 18px;
+}
+
+.list-unstyled > li{
+    padding-bottom: 5px;
+}
+
+.birth_date{
+    width: 171px;
+}
+
+.cv_more_info_label{
+    margin-left: 50px;
+}
+
+.cv_more_info{
+    font-size: 18px;
+}
+
+.cv_more_info_text{
+    width: 300px;
+    height: 135px;
+}
+
+.cv_skill_label{
+    margin-left: 20px;
+}
+
+.cv_skill{
+    font-size: 18px;
+}
+
+.cv_skill_list{
+    width: 191px;
+}
+
+.progress-bar{
+    background-color: #9D9D9D;
+}
+
+.cv_destination_label{
+    margin-left: 50px;
+}
+
+.cv_destination{
+    font-size: 18px;
+}
+
+.cv_destination_text{
+    width: 300px;
+    height: 205px;
+}
+
+a{
+    color: white !important;
+    font-weight:
+}
