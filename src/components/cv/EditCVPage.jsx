@@ -48,9 +48,9 @@ class EditCVPage extends Component {
                             <ul className="list-unstyled">
                                 <li>
                                     <span>From:</span>
-                                    <span>{cv.start}</span>
+                                    <span>{cv.year_start}</span>
                                     <span>To:</span>
-                                    <span></span>
+                                    <span>{cv.year_stop}</span>
                                 </li>
                                 <br/>
                                 <li>
@@ -85,10 +85,10 @@ class EditCVPage extends Component {
                                     <span><i className="lnr lnr-phone-handset"> {cv.phone}</i></span>
                                 </li>
                                 <li>
-                                    <span><i className="lnr lnr-envelope"> {this.state.cvs.map(getEmail, this)}</i></span>
+                                    <span><i className="lnr lnr-envelope"> {cv.email}</i></span>
                                 </li>
                                 <li>
-                                    <span><i className="lnr lnr-map-marker"> {this.state.cvs.map(getAddress, this)}</i></span>
+                                    <span><i className="lnr lnr-map-marker"> {cv.address}</i></span>
                                 </li>
                             </ul>
                         </div>
@@ -116,7 +116,7 @@ class EditCVPage extends Component {
                             <ul className="list-unstyled">
                                 <li>
                                         <span>
-                                            {this.state.cvs.map(getMajorSkill, this)}
+                                          {cv.majorskill}
                                         </span>
                                     <span>
                                                 <div className="progress cv_skill_list">
@@ -126,7 +126,7 @@ class EditCVPage extends Component {
                                 </li>
                                 <li>
                                         <span>
-                                            {this.state.cvs.map(getOtherSkill, this)}
+                                            {cv.otherskill}
                                         </span>
                                     <span>
                                                 <div className="progress cv_skill_list">
@@ -136,7 +136,7 @@ class EditCVPage extends Component {
                                 </li>
                                 <li>
                                         <span>
-                                            <p>Python</p>
+                                            <p>{cv.otherskill}</p>
                                         </span>
                                     <span>
                                                 <div className="progress cv_skill_list">
@@ -171,7 +171,7 @@ class EditCVPage extends Component {
 
         return (
             <div className="container-fluid">
-              {this.state.cvs.map{createCVViewPage, this}}
+              {this.state.cvs.map(createCVViewPage, this)}
             </div>
         );
     }
