@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import HomePage from './components/index/HomePage';
+import RegisteredStudentPage from './components/registeredstudent/RegisteredStudentPage';
 import TopicPage from './components/topics/TopicPage';
 import RegisteredTopicPage from './components/topics/RegisteredTopicPage';
 import InternshipPlanPage from './components/internshipplan/InternshipPlanPage';
@@ -21,6 +22,7 @@ ReactDOM.render(
     <Router history={browserHistory}>
         <Route path="/" component={App}>
             <Route path="/home" components={HomePage}/>
+            <Route path="/registeredstudent" component={RegisteredStudentPage}/>
             <Route path="/topics" components={TopicPage}/>
             <Route path="/registeredtopics" components={RegisteredTopicPage}/>
             <Route path="/internshipplan" components={InternshipPlanPage}/>

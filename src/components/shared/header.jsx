@@ -30,6 +30,7 @@ class Header extends Component {
                   <ul className="dropdown-menu">
                       <li><Link to="/topics">All Topics</Link></li>
                       <li><Link to="/internshippoint">Internship Point</Link></li>
+                      <li><Link to="/registeredstudent">Registered Student</Link></li>
                       {/*<li className="divider"></li>*/}
                       {/*<li><a href="#">Successful Registered Topic</a></li>*/}
                   </ul>
