@@ -6,25 +6,37 @@ class ManageStudentPage extends Component {
     constructor() {
         super();
         this.state = {
-            students: []
+            students: [
+              {
+                "name": "LTU12A",
+                "id": 92,
+                "student_id": 1,
+                "school_year": 0,
+                "grade": 4,
+                "from_year": 2013,
+                "to_year": 2018,
+                "major": "công nghệ thông tin"
+
+              }
+            ]
         };
     }
 
-    componentDidMount() {
-        var config = {
-            headers: {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTE5NDQ3NjUsInN1YiI6ODIsImlzcyI6Imh0dHA6XC9cL3Byb2plY3QtMi1sdHUtMDYuaGVyb2t1YXBwLmNvbVwvYXV0aCIsImlhdCI6MTQ5MTkxNjM2NSwibmJmIjoxNDkxOTE2MzY1LCJqdGkiOiJkOTMyMzc4NjVmODk0Y2QxZGU2ZjQ0YzBkZGZkMDY2NCJ9.-ytumzOq_oihKNmUNmMQdDLjO2WUKAONrUucXVE-bSQ'}
-        };
-
-        axios.get('https://project-2-ltu-06.herokuapp.com/students', config)
-            .then(response => {
-                this.setState({
-                    students: response.data.data
-                });
-            })
-            .catch(error => {
-                console.log('Error fetching and parsing data', error);
-            });
-    }
+    // componentDidMount() {
+    //     var config = {
+    //         headers: {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTE5NDQ3NjUsInN1YiI6ODIsImlzcyI6Imh0dHA6XC9cL3Byb2plY3QtMi1sdHUtMDYuaGVyb2t1YXBwLmNvbVwvYXV0aCIsImlhdCI6MTQ5MTkxNjM2NSwibmJmIjoxNDkxOTE2MzY1LCJqdGkiOiJkOTMyMzc4NjVmODk0Y2QxZGU2ZjQ0YzBkZGZkMDY2NCJ9.-ytumzOq_oihKNmUNmMQdDLjO2WUKAONrUucXVE-bSQ'}
+    //     };
+    //
+    //     axios.get('https://project-2-ltu-06.herokuapp.com/students', config)
+    //         .then(response => {
+    //             this.setState({
+    //                 students: response.data.data
+    //             });
+    //         })
+    //         .catch(error => {
+    //             console.log('Error fetching and parsing data', error);
+    //         });
+    // }
 
     render() {
 

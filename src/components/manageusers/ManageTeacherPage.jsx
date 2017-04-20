@@ -8,36 +8,53 @@ class ManageTeacherPage extends Component {
   constructor() {
     super();
     this.state = {
-      teachers: [],
+      teachers: [
+        {
+          "id": 102,
+          "name": "SOICT",
+          "teacher_id": "1",
+          "start": "0000-00-00",
+          "position": "quản lý thực tập",
+          "degree": "tiến sĩ"
+        },
+        {
+          "id": 112,
+          "name": "SOICT",
+          "teacher_id": "2",
+          "start": "0000-00-00",
+          "position": "hướng dẫn thực tập",
+          "degree": "thạc sĩ"
+        }
+      ],
       departments: []
     };
   }
 
-  componentDidMount() {
-    var config = {
-      headers: {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTIwODA5MTIsInN1YiI6ODIsImlzcyI6Imh0dHA6XC9cL3Byb2plY3QtMi1sdHUtMDYuaGVyb2t1YXBwLmNvbVwvYXV0aCIsImlhdCI6MTQ5MjA1MjUxMiwibmJmIjoxNDkyMDUyNTEyLCJqdGkiOiJmZWUyYzg4ZDg4YjYxNDdjZmZkMWMzZmRkODk0MjdiOSJ9.e_PKY16fLqIAKxc17nv7txm7BJ3Sf8LWobyaJL8EJj4'}
-    };
-
-    axios.get('https://project-2-ltu-06.herokuapp.com/teachers', config)
-      .then(response => {
-        this.setState({
-          teachers: response.data.data
-        });
-      })
-      .catch(error => {
-        console.log('Error fetching and parsing data', error);
-      });
-
-    axios.get('https://project-2-ltu-06.herokuapp.com/departments', config)
-      .then(response => {
-        this.setState({
-          departments: response.data.data
-        });
-      })
-      .catch(error => {
-        console.log('Error fetching and parsing data', error);
-      });
-  }
+  // componentDidMount() {
+  //   var config = {
+  //     headers: {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTIwODA5MTIsInN1YiI6ODIsImlzcyI6Imh0dHA6XC9cL3Byb2plY3QtMi1sdHUtMDYuaGVyb2t1YXBwLmNvbVwvYXV0aCIsImlhdCI6MTQ5MjA1MjUxMiwibmJmIjoxNDkyMDUyNTEyLCJqdGkiOiJmZWUyYzg4ZDg4YjYxNDdjZmZkMWMzZmRkODk0MjdiOSJ9.e_PKY16fLqIAKxc17nv7txm7BJ3Sf8LWobyaJL8EJj4'}
+  //   };
+  //
+  //   axios.get('https://project-2-ltu-06.herokuapp.com/teachers', config)
+  //     .then(response => {
+  //       this.setState({
+  //         teachers: response.data.data
+  //       });
+  //     })
+  //     .catch(error => {
+  //       console.log('Error fetching and parsing data', error);
+  //     });
+  //
+  //   axios.get('https://project-2-ltu-06.herokuapp.com/departments', config)
+  //     .then(response => {
+  //       this.setState({
+  //         departments: response.data.data
+  //       });
+  //     })
+  //     .catch(error => {
+  //       console.log('Error fetching and parsing data', error);
+  //     });
+  // }
 
   render() {
 

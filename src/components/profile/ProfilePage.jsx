@@ -8,35 +8,47 @@ class ProfilePage extends Component {
   constructor() {
     super();
     this.state = {
-      users: []
+      users: [
+        {
+          "id": 82,
+          "username": "admin",
+          "name": "ltu",
+          "email": "ltu@gmail.com",
+          "phonenumber": 123456789,
+          "dateofbirth": "0000-00-00",
+          "gender": 1,
+          "groupName": "admin",
+          "groupId": 1
+        }
+      ]
     };
   }
 
-  componentDidMount() {
-    var config = {
-      headers: {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTIwODA5MTIsInN1YiI6ODIsImlzcyI6Imh0dHA6XC9cL3Byb2plY3QtMi1sdHUtMDYuaGVyb2t1YXBwLmNvbVwvYXV0aCIsImlhdCI6MTQ5MjA1MjUxMiwibmJmIjoxNDkyMDUyNTEyLCJqdGkiOiJmZWUyYzg4ZDg4YjYxNDdjZmZkMWMzZmRkODk0MjdiOSJ9.e_PKY16fLqIAKxc17nv7txm7BJ3Sf8LWobyaJL8EJj4'}
-    };
-
-    axios.get('http://project-2-ltu-06.herokuapp.com/user', config)
-      .then(response => {
-        this.setState({
-          users: response.data
-        });
-      })
-      .catch(error => {
-        console.log('Error fetching and parsing data', error);
-      });
-
-    axios.get('http://project-2-ltu-06.herokuapp.com/classes', config)
-      .then(response => {
-        this.setState({
-          users: response.data
-        });
-      })
-      .catch(error => {
-        console.log('Error fetching and parsing data', error);
-      });
-  }
+  // componentDidMount() {
+  //   var config = {
+  //     headers: {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTIwODA5MTIsInN1YiI6ODIsImlzcyI6Imh0dHA6XC9cL3Byb2plY3QtMi1sdHUtMDYuaGVyb2t1YXBwLmNvbVwvYXV0aCIsImlhdCI6MTQ5MjA1MjUxMiwibmJmIjoxNDkyMDUyNTEyLCJqdGkiOiJmZWUyYzg4ZDg4YjYxNDdjZmZkMWMzZmRkODk0MjdiOSJ9.e_PKY16fLqIAKxc17nv7txm7BJ3Sf8LWobyaJL8EJj4'}
+  //   };
+  //
+  //   axios.get('http://project-2-ltu-06.herokuapp.com/user', config)
+  //     .then(response => {
+  //       this.setState({
+  //         users: response.data
+  //       });
+  //     })
+  //     .catch(error => {
+  //       console.log('Error fetching and parsing data', error);
+  //     });
+  //
+  //   axios.get('http://project-2-ltu-06.herokuapp.com/classes', config)
+  //     .then(response => {
+  //       this.setState({
+  //         users: response.data
+  //       });
+  //     })
+  //     .catch(error => {
+  //       console.log('Error fetching and parsing data', error);
+  //     });
+  // }
 
   render() {
 

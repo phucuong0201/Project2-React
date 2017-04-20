@@ -7,37 +7,51 @@ class ManagePointPage extends Component {
   constructor() {
     super();
     this.state = {
-        company_rates: []
+        company_rates: [
+          {
+            "id": 1,
+            "student_id": 92,
+            "student_name": "Lê Thị Mai",
+            "employee_id": 132,
+            "employee_name": "Phạm Thị Thảo",
+            "topic_id": 1,
+            "topic_title": "Phát hiện tấn công website",
+            "point": 10,
+            "rate": "tốt",
+            "period": "20161"
+          }
+        ]
     };
   }
 
-  componentDidMount() {
-    var config = {
-        headers: {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTIwMDEzMjMsInN1YiI6ODIsImlzcyI6Imh0dHA6XC9cL3Byb2plY3QtMi1sdHUtMDYuaGVyb2t1YXBwLmNvbVwvYXV0aCIsImlhdCI6MTQ5MTk3MjkyMywibmJmIjoxNDkxOTcyOTIzLCJqdGkiOiJkYWZmNzNmMmFhZmQ1ODQ4YmJlMTcxNjNkMGE4NzIwZiJ9.bemX6z6YgFvTVL72yHCEAI-0A1YzulcYVU33W6EuzPc'}
-    };
-
-    axios.get('https://project-2-ltu-06.herokuapp.com/company_rates', config)
-      .then(response => {
-        this.setState({
-            company_rates: response.data.data
-        });
-      })
-      .catch(error => {
-        console.log('Error fetching and parsing data', error);
-      });
-  }
+  // componentDidMount() {
+  //   var config = {
+  //       headers: {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTIwMDEzMjMsInN1YiI6ODIsImlzcyI6Imh0dHA6XC9cL3Byb2plY3QtMi1sdHUtMDYuaGVyb2t1YXBwLmNvbVwvYXV0aCIsImlhdCI6MTQ5MTk3MjkyMywibmJmIjoxNDkxOTcyOTIzLCJqdGkiOiJkYWZmNzNmMmFhZmQ1ODQ4YmJlMTcxNjNkMGE4NzIwZiJ9.bemX6z6YgFvTVL72yHCEAI-0A1YzulcYVU33W6EuzPc'}
+  //   };
+  //
+  //   axios.get('https://project-2-ltu-06.herokuapp.com/company_rates', config)
+  //     .then(response => {
+  //       this.setState({
+  //           company_rates: response.data.data
+  //       });
+  //     })
+  //     .catch(error => {
+  //       console.log('Error fetching and parsing data', error);
+  //     });
+  // }
 
   render() {
 
-    var createPointRow = function(company_rates) {
+    var createPointRow = function(company_rate) {
       return (
-        <tr key={company_rates.id}>
-          <td>{company_rates.student_id}</td>
-          <td>{company_rates.student_name}</td>
-          <td>{company_rates.topic_title}</td>
-          <td>{company_rates.employee_name}</td>
-          <td>{company_rates.point}</td>
-          <td>{company_rates.rate}</td>
+        <tr>
+          <td>{company_rate.student_id}</td>
+          <td>{company_rate.student_name}</td>
+          {/*<td>{company_rates.topic_title}</td>*/}
+          <td></td>
+          <td>{company_rate.employee_name}</td>
+          <td>{company_rate.point}</td>
+          <td>{company_rate.rate}</td>
           <td>
             <div>
               <span><Link to="edit_point.html">Edit <i class="lnr lnr-pencil"></i></Link></span>

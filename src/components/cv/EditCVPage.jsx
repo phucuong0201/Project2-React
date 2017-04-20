@@ -7,25 +7,52 @@ class EditCVPage extends Component {
     constructor() {
         super();
         this.state = {
-            cvs: []
+            cvs: [
+              {
+                "id": 1,
+                "student_id": 92,
+                "name": "Mai_CV",
+                "avatar": "",
+                "position": "intern ruby",
+                "dateofbirth": "1993-09-09",
+                "gender": 0,
+                "phone": 1692630370,
+                "email": "ltmai93@gmail.com",
+                "address": "Thanh Hóa",
+                "link": "",
+                "intent": "",
+                "skill": "",
+                "hobby": "",
+                "year_start": "0000-00-00",
+                "year_stop": "0000-00-00",
+                "grade": 4,
+                "school": "Đại học bách khoa hà nội",
+                "major": "Công nghệ thông tin",
+                "cpa": 3.0499999999999998,
+                "majorskill": "java",
+                "otherskill": "c",
+                "created_at": "2017-03-22 00:00:00",
+                "updated_at": "2017-03-22 00:00:00"
+              }
+            ]
         };
     }
 
-    componentDidMount() {
-        var config = {
-            headers: {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTIxMjA0NzcsInN1YiI6ODIsImlzcyI6Imh0dHA6XC9cL3Byb2plY3QtMi1sdHUtMDYuaGVyb2t1YXBwLmNvbVwvYXV0aCIsImlhdCI6MTQ5MjA5MjA3NywibmJmIjoxNDkyMDkyMDc3LCJqdGkiOiI4NjkyYmNiYTM1MTc0ZjJhMjBkYTMzM2I4YzJmNjk4MiJ9.A9ttBBYoSdumfWAimrYrl0RfZOt6jzZPuCXCHekh4Jw'}
-        };
-
-        axios.get('https://project-2-ltu-06.herokuapp.com/cvs', config)
-            .then(response => {
-                this.setState({
-                    cvs: response.data.data
-                });
-            })
-            .catch(error => {
-                console.log('Error fetching and parsing data', error);
-            });
-    }
+    // componentDidMount() {
+    //     var config = {
+    //         headers: {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTIxMjA0NzcsInN1YiI6ODIsImlzcyI6Imh0dHA6XC9cL3Byb2plY3QtMi1sdHUtMDYuaGVyb2t1YXBwLmNvbVwvYXV0aCIsImlhdCI6MTQ5MjA5MjA3NywibmJmIjoxNDkyMDkyMDc3LCJqdGkiOiI4NjkyYmNiYTM1MTc0ZjJhMjBkYTMzM2I4YzJmNjk4MiJ9.A9ttBBYoSdumfWAimrYrl0RfZOt6jzZPuCXCHekh4Jw'}
+    //     };
+    //
+    //     axios.get('https://project-2-ltu-06.herokuapp.com/cvs', config)
+    //         .then(response => {
+    //             this.setState({
+    //                 cvs: response.data.data
+    //             });
+    //         })
+    //         .catch(error => {
+    //             console.log('Error fetching and parsing data', error);
+    //         });
+    // }
 
     render() {
 
@@ -171,7 +198,7 @@ class EditCVPage extends Component {
 
         return (
             <div className="container-fluid">
-              {this.state.cvs.map(createCVViewPage, this)}
+              {this.state.cvs.map(createCVViewPage, this  )}
             </div>
         );
     }

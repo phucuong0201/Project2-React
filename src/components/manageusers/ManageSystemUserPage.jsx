@@ -6,25 +6,110 @@ class ManageSystemUserPage extends Component {
   constructor() {
     super();
     this.state = {
-      users: []
+      users: [
+        {
+          "id": 82,
+          "username": "admin",
+          "email": "ltu@gmail.com",
+          "name": "ltu",
+          "phonenumber": 123456789,
+          "dateofbirth": "0000-00-00",
+          "gender": 1,
+          "lock": 0,
+          "status": 1,
+          "groupname": "admin"
+        },
+        {
+          "id": 142,
+          "username": "namphuong",
+          "email": "phuong@gmail.com",
+          "name": "nam phương",
+          "phonenumber": 965868102,
+          "dateofbirth": "0000-00-00",
+          "gender": 1,
+          "lock": 0,
+          "status": 1,
+          "groupname": "admin"
+        },
+        {
+          "id": 112,
+          "username": "banhmai",
+          "email": "btqm@gmail.com",
+          "name": "Bành Thị Quỳnh Mai",
+          "phonenumber": 123456789,
+          "dateofbirth": "0000-00-00",
+          "gender": 0,
+          "lock": 0,
+          "status": 1,
+          "groupname": "teacher_instructions"
+        },
+        {
+          "id": 102,
+          "username": "huonggiang",
+          "email": "vthg@gmail.com",
+          "name": "Vũ Thị Hương GIang",
+          "phonenumber": 123456789,
+          "dateofbirth": "0000-00-00",
+          "gender": 0,
+          "lock": 0,
+          "status": 1,
+          "groupname": "teacher_managers"
+        },
+        {
+          "id": 122,
+          "username": "leha",
+          "email": "halt@gmail.com",
+          "name": "Trần Lê Hải",
+          "phonenumber": 123456789,
+          "dateofbirth": "0000-00-00",
+          "gender": 1,
+          "lock": 0,
+          "status": 1,
+          "groupname": "company's agents"
+        },
+        {
+          "id": 132,
+          "username": "phuongthao",
+          "email": "thaopt@gmail.com",
+          "name": "Phạm Thị Thảo",
+          "phonenumber": 123456789,
+          "dateofbirth": "0000-00-00",
+          "gender": 0,
+          "lock": 0,
+          "status": 1,
+          "groupname": "company's instructors"
+        },
+        {
+          "id": 92,
+          "username": "lemai",
+          "email": "20118994@gmail.com",
+          "name": "Lê Thị Mai",
+          "phonenumber": 123456789,
+          "dateofbirth": "0000-00-00",
+          "gender": 0,
+          "lock": 0,
+          "status": 1,
+          "groupname": "students"
+        }
+      ]
     };
   }
 
-  componentDidMount() {
-    var config = {
-      headers: {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTIxMDA0NDQsInN1YiI6ODIsImlzcyI6Imh0dHA6XC9cL3Byb2plY3QtMi1sdHUtMDYuaGVyb2t1YXBwLmNvbVwvYXV0aCIsImlhdCI6MTQ5MjA3MjA0NCwibmJmIjoxNDkyMDcyMDQ0LCJqdGkiOiI5YTRlMTcyOTUyZjY0MGRmODgyNjQ2Njc1MzM2NDkzZCJ9.k5cxabxpskjvegtjlXXXVLafi5VRVUgqg3sKFfQA5eM'}
-    };
-
-    axios.get('https://project-2-ltu-06.herokuapp.com/users', config)
-      .then(response => {
-        this.setState({
-          teachers: response.data
-        });
-      })
-      .catch(error => {
-        console.log('Error fetching and parsing data', error);
-      });
-  }
+    // componentDidMount() {
+    //   var config = {
+    //     headers: {'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTIxMDA0NDQsInN1YiI6ODIsImlzcyI6Imh0dHA6XC9cL3Byb2plY3QtMi1sdHUtMDYuaGVyb2t1YXBwLmNvbVwvYXV0aCIsImlhdCI6MTQ5MjA3MjA0NCwibmJmIjoxNDkyMDcyMDQ0LCJqdGkiOiI5YTRlMTcyOTUyZjY0MGRmODgyNjQ2Njc1MzM2NDkzZCJ9.k5cxabxpskjvegtjlXXXVLafi5VRVUgqg3sKFfQA5eM'}
+    //   };
+    //
+    //   axios.get('https://project-2-ltu-06.herokuapp.com/users', config)
+    //     .then(response => {
+    //       this.setState({
+    //         teachers: response.data
+    //       });
+    //     })
+    //     .catch(error => {
+    //       console.log('Error fetching and parsing data', error);
+    //     });
+    // }
 
   render() {
 
@@ -34,7 +119,7 @@ class ManageSystemUserPage extends Component {
           <td>{user.id}</td>
           <td>{user.username}</td>
           <td>{user.name}</td>
-          <td>{user.gender}</td>
+          <td>{user.gender === 0 ?  'Male' : 'Female' }</td>
           <td>{user.dateofbirth}</td>
           <td>{user.email}</td>
           <td>{user.phonenumber}</td>
